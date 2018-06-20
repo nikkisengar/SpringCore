@@ -13,6 +13,9 @@ public class SetterConstructorInjectionTest {
 
 	public static void main(String[] args) {
 		
+		
+		System.out.println("Performing Setter Injection will override the Constructor Injection...");
+		System.out.println("=======================================================================");
 		System.out.println("main(-) method called...");
 		// Locating the configuration file
 		Resource res=null;
