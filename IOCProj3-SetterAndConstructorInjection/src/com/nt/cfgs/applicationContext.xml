@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Configuring the Dependent class which is also performing the Setter Injection-->
+	<bean id="dt" class="java.util.Date">
+		<property name="year" value="110"/>
+		<property name="month" value="5"/>
+		<property name="date" value="19"/>
+	</bean>
+	
+	<!-- Configuring the Target/Main Class -->
+	<bean id="wish" class="com.nt.beans.WishMsgGenerator">
+		<!-- Performing the Constructor Injection -->
+		<constructor-arg name="date" ref="dt"/>
+	</bean>
+
+</beans>
