@@ -12,7 +12,8 @@ import com.nt.beans.WishMsgGenerator;
 public class ConstructorInjectionTest {
 
 	public static void main(String[] args) {
-		
+		System.out.println("Performing Constructor Injection...");
+		System.out.println("======================================");
 		System.out.println("main(-) method called...");
 		// Locating the configuration file
 		Resource res=null;

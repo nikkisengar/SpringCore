@@ -13,6 +13,8 @@ public class SetterInjectionTest {
 
 	public static void main(String[] args) {
 		
+		System.out.println("Performing Setter Injection...");
+		System.out.println("======================================");
 		System.out.println("main(-) method called...");
 		// Locating the configuration file
 		Resource res=null;
