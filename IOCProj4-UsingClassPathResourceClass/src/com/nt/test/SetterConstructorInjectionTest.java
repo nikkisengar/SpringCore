@@ -4,6 +4,7 @@ package com.nt.test;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 
@@ -14,8 +15,8 @@ public class SetterConstructorInjectionTest {
 	public static void main(String[] args) {
 		
 		
-		System.out.println("Performing Setter Injection will override the Constructor Injection...");
-		System.out.println("=======================================================================");
+		System.out.println("Using the ClassPathResource class of Resource Interface.\nClassPathResource class is better then FileSystemResource \nbecause we need not to remember the lengthy path of where the applicationContext.xml file is kept.");
+		System.out.println("===================================================================================================");
 		System.out.println("main(-) method called...");
 		// Locating the configuration file
 		Resource res=null;
@@ -27,7 +28,7 @@ public class SetterConstructorInjectionTest {
 		WishMsgGenerator wish=null;
 		
 		//Using the references
-		res=new FileSystemResource("src/com/nt/cfgs/applicationContext.xml");
+		res=new ClassPathResource("applicationContext.xml");
 		
 		factory=new XmlBeanFactory(res);
 		
