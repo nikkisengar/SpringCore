@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Configuring the House class. Solution 3 which is the best solution where we can specify the
+	 name attribute which is the parameters of the constructor-->
+	
+	<!-- Solution one for Constructor must follow the same order of parameter is USING name attribute -->
+	<bean id="house" class="com.nt.beans.House">
+		
+		<constructor-arg name="noOfRooms" value="5"/>
+		<constructor-arg name="location" value="Mumbai"/>
+		<constructor-arg name="price" value="1000.00"/>
+		<constructor-arg name="name" value="Mannat"/>
+	</bean>
+	
+	<!-- Even though we have these many option for resolving the constructor problem but it is not recommended to use -->
+
+</beans>

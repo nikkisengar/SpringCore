@@ -4,6 +4,9 @@ import com.nt.dto.StudentDTO;
 import com.nt.service.ExamService;
 import com.nt.vo.StudentVO;
 
+/*Controller class contains integration logic (i.e. logic to take request/inputs
+ * and to pass to appropriate service class, similarly logic to take output
+ * and pass it to appropriate client/view(servlet/JSP) components)*/
 public class MainController {
 	
 	//Creating the Service Interface object

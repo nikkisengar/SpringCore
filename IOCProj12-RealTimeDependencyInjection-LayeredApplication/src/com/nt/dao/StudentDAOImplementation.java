@@ -35,7 +35,7 @@ public class StudentDAOImplementation implements StudentDAO {
 		//create PreparedStatement object
 		ps=con.prepareStatement(STUDENT_INSERT_QUERY);
 		
-		//set BO data as the query param value
+		//set BO data as the query parameter value
 		ps.setInt(1, bo.getSno());
 		ps.setString(2, bo.getSname());
 		ps.setInt(3, bo.getTotal());

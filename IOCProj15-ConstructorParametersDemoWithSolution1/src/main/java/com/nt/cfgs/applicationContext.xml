@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Configuring the House class. Problem in this Solution is that if there are more than one variable of same type then 
+	we have to write the constructor parameters in order only , otherwise it will through an error-->
+
+	<!-- Solution one for Constructor must follow the same order of parameter is USING type attribute -->
+	<bean id="house" class="com.nt.beans.House">
+		<constructor-arg type="String" value="Mannat"/>
+		<constructor-arg type="String" value="Mumbai"/>
+		<constructor-arg type="float" value="1000.00"/>
+		<constructor-arg type="int" value="5"/>
+		<!-- <constructor-arg type="String" value="Mannat"/> will give error if specified here because Mumbai is also String -->
+	</bean>
+
+</beans>

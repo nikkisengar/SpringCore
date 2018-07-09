@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Configuring the House class. Problem in this implementation is that if we forgot 
+	or mismatch the order of the parameter, then it will through an error-->
+	<bean id="house" class="com.nt.beans.House">
+	    <constructor-arg value="Mannat"/>
+		<constructor-arg value="Mumbai"/>
+		<constructor-arg value="1000.00"/>
+		<constructor-arg value="5"/>
+		<!-- <constructor-arg value="Mannat"/> will give error if specified here as we have to follow the order of parameters-->
+	</bean>
+
+</beans>
