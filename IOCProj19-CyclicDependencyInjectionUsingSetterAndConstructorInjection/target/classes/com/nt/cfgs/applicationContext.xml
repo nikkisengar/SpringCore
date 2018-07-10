@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- A class configuration -->
+	<bean id="aClass" class="com.nt.beans.A">
+		<property name="b" ref="bClass"/>
+	</bean>
+	
+	<!-- B class Configuration -->
+	<bean id="bClass" class="com.nt.beans.B">
+		<constructor-arg name="a" ref="aClass"/>
+	</bean>
+
+</beans>
